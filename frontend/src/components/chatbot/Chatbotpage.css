@@ -1,0 +1,123 @@
+/* src/Chatbotpage.css */
+
+/* Bubble style */
+.chatbot-bubble {
+    background-color: #915EFF;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Full chat interface style */
+.chatbot-container {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 18px;
+    border-radius: 8px;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.media-title {
+    font-weight: bold;
+}
+
+.media-center {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.media img {
+    width: 30px;
+    height: 30px;
+}
+
+.media-body {
+    margin-left: -2px;
+}
+
+.media-title {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.media-status {
+    color: rgb(32, 199, 32);
+    margin-left: 10px;
+}
+
+.text-right {
+    font-weight: bold;
+    color: #915EFF;
+    box-shadow: #915EFF;
+}
+
+.mr-9 {
+    margin-right: 9px;
+}
+
+.input-group {
+    display: flex;
+    margin-top: 10px;
+}
+
+.input-group .form-control {
+    flex: 1;
+}
+
+.input-group button {
+    margin-left: 10px;
+    color: #fff;
+    border-radius: 8px;
+    background-color: #915EFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-control {
+    background-color: whitesmoke;
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background-color: #915EFF;
+    color: #fff;
+    text-align: right;
+}
+
+.message.bot {
+    background-color: #e9ecef;
+    color: #000;
+    align-self: flex-start;
+}
+
+.btn.btn-primary {
+    border-radius: 8%;
+}
