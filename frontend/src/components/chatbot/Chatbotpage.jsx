@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Chatbotpage.css';
 
 const Chatbot = () => {
     const [chatMessages, setChatMessages] = useState([]);
     const [userMessage, setUserMessage] = useState("");
+
+    useEffect(() => {
+        const initialBotMessage = { sender: 'bot', message: 'Hello! How can I assist you today?' };
+        setChatMessages([initialBotMessage]);
+    }, []);
 
     const handleButtonClick = () => {
         if (userMessage.trim() === "") {
@@ -22,12 +27,12 @@ const Chatbot = () => {
         let botMessageText = "";
 
         // Custom responses based on user input
-        if (message.toLowerCase() === "hi" ) {
+        if (message.toLowerCase() === "hi" || message.toLowerCase() === "hey") {
             botMessageText = "Hello! How can I assist you today?";
         } else if (message.toLowerCase().includes("startup")) {
             botMessageText = "We are a tech startup focusing on innovative solutions to improve daily life.";
         } else if (message.toLowerCase().includes("services")) {
-            botMessageText = "We offer a range of services including web development, mobile app development, and Video Editing and Blockchain development.";
+            botMessageText = "We offer a range of services including web development, mobile app development, Video Editing and Blockchain development.";
         } else {
             botMessageText = "I'm not sure how to respond to that. Can you ask something else about our startup or services?";
         }

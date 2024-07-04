@@ -1,7 +1,6 @@
-// Model.jsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { useThree } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/Ethereum/eth.gltf'); // Ensure the correct path
@@ -12,19 +11,21 @@ export default function Model(props) {
     materials['default'].color.set('#915EFF'); // Set color to purple
   }
 
-  // Access three.js camera and controls
-  const { camera, gl } = useThree();
+  // Animation variables
+  const meshRef = useRef();
 
-  useEffect(() => {
-    // Reset camera position and rotation on component mount (or page reload)
-    camera.position.set(4, 49.5,2 ); // Example initial position
-    camera.lookAt(15,3, 20); // Example initial look at origin
-  }, [camera]);
+  // UseFrame to animate movement
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x += 0.01; // Rotate on x-axis
+      meshRef.current.rotation.y += 0.02; // Rotate on y-axis
+      meshRef.current.rotation.z += 0.01; // Rotate on z-axis
+    }
+  });
 
   return (
     <group {...props} dispose={null} scale={[scale, scale, scale]}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials['default']} rotation={[-Math.PI / 30, 20, 0]} />
-     
+      <mesh ref={meshRef} geometry={nodes.Object_2.geometry} material={materials['default']} />
     </group>
   );
 }

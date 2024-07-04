@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 import ErrorBoundary from "./ErrorBoundary";
 import Chatbotpage from "./components/chatbot/Chatbotpage";
+
 
 const App = () => {
   const [showChatbot, setShowChatbot] = useState(false);
@@ -15,7 +16,7 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
+
       <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
@@ -23,10 +24,11 @@ const App = () => {
             <Hero />
           </ErrorBoundary>
         </div>
+
         <About />
-        <Experience />
-        <Tech />
+    
         <Works />
+        <Tech />
         <Feedbacks />
         <div className="chatbot-bubble" onClick={toggleChatbot}>
           {showChatbot ? (
@@ -43,7 +45,7 @@ const App = () => {
           </div>
         )}
       </div>
-    </BrowserRouter>
+  
   );
 };
 

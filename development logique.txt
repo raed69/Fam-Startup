@@ -1,0 +1,6 @@
+1)awel mar7la n7a4er site ey wa7d ynejmm yetsaf7ou ma8er 7atta login w registre (navbar +body(services,projects,memebers) + footer(email,numero ,social media) + chatbot)
+2)page login w registre 
+3)partie mta3 submiter une demande fel site tetzed
+4)ncreatiw Dashboard mta3 admin (yaccepti feha el demandes w ychuf les analyse mta3les demande elli mechin bel behi …)
+
+----duree--- 

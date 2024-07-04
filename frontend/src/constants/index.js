@@ -16,7 +16,8 @@ import {
     figma,
     docker,
     threejs,
-    seca
+   inovo 
+    
    
   } from "../assets";
 
@@ -34,6 +35,7 @@ import {
       id: "contact",
       title: "Contact",
     },
+  
   ];
   
   const services = [
@@ -112,25 +114,15 @@ import {
   
   const experiences = [
     {
-      title: " Admin Dashboard for Seca Entrance",
-      company_name: "Seca",
-      icon:seca,
-      iconBg: "#383E56",
-    
-      points: [
-        "Developing and maintaining web applications using Express JS, React JS ,Mysql.",
-        "Implementing responsive design and ensuring reliable user experince for Seca",
-      ],
+      title: "I-novo",
+      company_name: "personnel",
+      image: inovo,
+      link: "https://inovoshop.netlify.app/"
     },
-    {
-      title: "Defi",
+  {
+      title: "projet2",
       company_name: "DunDIL",
-      
-      iconBg: "#E6DEDD",
-     
-      points: [
-        
-      ],
+    
     },
     
    
